@@ -1,0 +1,37 @@
+<script lang="ts">
+    import Block from './block.svelte';
+
+    let count = $state(0)
+
+    const towerglass_pkg = {
+        name: 'Towerglass',
+        desc: 'Anxiety inducing platformer for GMTK',
+        num: 2,
+    }
+
+    const blendobar_pkg = {
+        name: 'Blend O\' Bar',
+        desc: 'Exploration cooking game',
+        num: 13,
+    }
+
+    function increment() {
+        count += 1;
+    }
+</script>
+
+<h1>Welcome to SvelteKit</h1>
+<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+
+<button onclick={increment}>
+    CLICK ME {count}
+</button>
+
+{#if count % 3 == 0}
+    <p>{count} is divisible by 3</p>
+{:else}
+    <p>{count} is not divisible by 3</p>
+{/if}
+
+<Block {...towerglass_pkg}/>
+<Block {...blendobar_pkg}/>
