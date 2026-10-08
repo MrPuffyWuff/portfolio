@@ -6,7 +6,7 @@
     const towerglass_pkg = {
         name: 'Towerglass',
         desc: 'Anxiety inducing platformer for GMTK',
-        num: 2,
+        num: 1,
     }
 
     const blendobar_pkg = {
@@ -15,12 +15,19 @@
         num: 13,
     }
 
+    const stockstriker_pkg = {
+        name: 'Stock Strikers',
+        desc: 'Financial Rouglite Chaos',
+        num: 11,
+    }
+
     function increment() {
         count += 1;
     }
 </script>
 
-<h1>Welcome to SvelteKit</h1>
+<h1>Welcome to My Portfolio!</h1>
+
 <p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
 
 <button onclick={increment}>
@@ -35,3 +42,4 @@
 
 <Block {...towerglass_pkg}/>
 <Block {...blendobar_pkg}/>
+<Block {...stockstriker_pkg}/>
